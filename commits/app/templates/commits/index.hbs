@@ -1,0 +1,24 @@
+<h2>Commits</h2>
+{{!-- <section class="mybox">
+    {{#each model  as |c|}}
+    <div class="sha"><b><em>Sha</em>:</b> {{#link-to 'commits.commit' c}}{{c.sha}}{{/link-to}}</div>
+    <div class="author"><b><em>Author</em>:</b> {{c.commit.author.name}}</div>
+    <div class="message"><b><em>Message</em>:</b> {{c.commit.message}}</div>
+    <hr/>
+    {{/each}}
+</section> --}}
+
+<table border="1" width="50%">
+    <thead></thead>
+    <tbody>
+        {{#each model as |c|}}
+            <tr>
+                <td>
+                    <strong>Author</strong>: s{{c.commit.author.name}}<br/>
+                    <strong>Message:</strong>: {{c.commit.message}}<br/>
+                    <strong>Sha</strong>:{{#link-to 'commits.commit' c}}{{c.sha}}{{/link-to}}<br/>
+                </td>
+            </tr>
+        {{/each}}    
+    </tbody>
+</table>

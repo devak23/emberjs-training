@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('commits', function() {
+    this.route('commit', {path: ':sha'});
+  });
 });
 
 export default Router;
