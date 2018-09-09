@@ -3,7 +3,7 @@ import data from "../../data";
 
 export default Route.extend({
     model: function (params) {
-        window.console.log("model() @ routes/commits/commit.js");
+        window.console.log("model() @ routes/commits/index.js");
         console.log("params for model(): ", params);
         return data;
     }
