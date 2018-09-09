@@ -10,6 +10,11 @@ Router.map(function() {
   this.route('commits', function() {
     this.route('commit', {path: ':sha'});
   });
+
+  this.route('books', function(){
+    this.route('book',{path: "/:id"});
+    this.route('new');
+  });  
 });
 
 export default Router;

@@ -1,8 +1,13 @@
 
 import DS from "ember-data";
+import { computed } from "@ember/object";
 
 export default DS.Model.extend({
-  title: DS.attr('string'),
-  description: DS.attr('string'),
-  books: DS.hasMany('book',{ async: true }),
+  firstName: DS.attr('string'),
+  lastName: DS.attr('string'),
+  fullName: computed('firstName', 'lastName', function() {
+    return this.get('firstName') + ' ' + this.get('lastName');
+  }),
+  bio: DS.attr('string'),
+  books: DS.hasMany('book')
 });

@@ -11,8 +11,8 @@ export default Route.extend({
     //     console.log(data);
     //     return data;
     // }
-    redirect: function() {
-        window.console.log("redirect() @ routes/index.js");
-        this.transitionTo('commits.index');
-    }
+    // redirect: function() {
+    //     window.console.log("redirect() @ routes/index.js");
+    //     this.transitionTo('commits.index');
+    // }
 });

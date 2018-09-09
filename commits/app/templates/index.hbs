@@ -12,3 +12,18 @@
         {{/each}}    
     </tbody>
 </table> --}}
+
+
+
+<ul>
+    <li>{{#link-to "books.index"}}
+          Fetch All the Books From Server{{/link-to}} 
+          <p style="color:red">[Note: Won't work since there's no server.]</p>
+    </li>
+
+    <li>{{#link-to "books.new"}}
+            Create a new book{{/link-to}}
+    </li>
+</ul><br><br><br>
+
+{{outlet}}
