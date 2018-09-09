@@ -1,0 +1,31 @@
+This is the {{ name }}. <br>
+I make the spa app work :)
+
+
+<table border="1" width="50%">
+    <thead>
+        {{# each model.headers as |header|}}
+            <th> {{ header }}</th>
+        {{/each}}
+    </thead>
+    <tbody>
+        {{#each model.companies as  |company| }}
+        <tr>
+        <td> {{ company.name }} </td>
+        <td style="background: {{ color }} "> {{ company.headquarters }} </td>
+        <td> {{ company.revenue }} </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<button {{ action 'changeColor' }}>Change Color</button>
+
+
+<p>
+First Name: {{input type="text" value=model.customer.firstName}} <br />
+Last Name: {{ input type="text" value=model.customer.lastName }} <br />
+</p>
+<bold>Hi {{ model.customer.firstName }} {{ model.customer.lastName }} </bold>
+
+

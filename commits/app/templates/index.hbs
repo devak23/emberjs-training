@@ -1,0 +1,11 @@
+<table border="1" width="50%">
+    <thead></thead>
+    <tbody>
+        {{#each model as |c|}}
+            <tr>
+                <td>{{c.commit.author.name}}</td>
+                <td>{{c.commit.message}}</td>
+            </tr>
+        {{/each}}    
+    </tbody>
+</table>
